@@ -1,0 +1,16 @@
+<beans>
+    <!-- bean with cons params and additional setter param -->
+    <bean name="battery" type="org.mayukh.rivet.model.Battery">
+        <cons-param name="name" type="java.lang.String" value="Amaron" />
+        <cons-param name="chargeLeft" type="java.lang.Double" value="40.0" />
+        <setter-param name="chargeLeft" type="java.lang.Double" value="42.0" />
+    </bean>
+
+    <!-- bean with setter params and injectable field -->
+    <bean name="tesla" type="org.mayukh.rivet.model.ElectricCar">
+        <setter-param name="name" type="java.lang.String" value="Tesla" />
+    </bean>
+
+    <!-- inline bean definition -->
+    <bean name="compactEV" type="org.mayukh.rivet.model.ElectricCar" />
+</beans>
